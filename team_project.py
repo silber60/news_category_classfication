@@ -77,3 +77,4 @@ df_titles.to_csv('./crawling_data0.csv', index=False)
 # >>>>>>> main
 # >>>>>>> main
 driver.close()
+
