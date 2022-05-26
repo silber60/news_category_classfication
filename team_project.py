@@ -63,5 +63,9 @@ for i in range(2, 4):
 df_section_titles = pd.DataFrame(titles, columns=['titles'])
 df_section_titles['category'] = category[i]
 df_titles = pd.concat([df_titles, df_section_titles], ignore_index=True)
-df_titles.to_csv('./crawling_data1.csv', index=False)
+# <<<<<<< main
+# df_titles.to_csv('./crawling_data1.csv', index=False)
+# =======
+df_titles.to_csv('./crawling_data0.csv', index=False)
+# >>>>>>> main
 driver.close()
