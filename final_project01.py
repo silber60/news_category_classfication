@@ -7,7 +7,7 @@ import time
 read_csv = []
 
 for i in range(3):
-     read_csv.append(pd.read_csv('./crawling_data{}.csv'.format(i), header=None))
+     read_csv.append(pd.read_csv('./crawling_data{}.csv'.format(i)))
 
 final_concat = pd.concat(read_csv)
 print(final_concat)
