@@ -12,5 +12,5 @@ for i in range(3):
 final_concat = pd.concat(read_csv)
 print(final_concat)
 
-# final_concat.to_csv('./final_concat.csv', index=False)
+final_concat.to_csv('./final_concat.csv', index=False)
 final_concat.to_excel('./final_concat.xlsx', index=False)
