@@ -17,7 +17,7 @@ options.add_argument('--disable-dev-shm-usage')
 options.add_argument('disable-gpu')
 driver = webdriver.Chrome('./chromedriver', options=options)
 df_titles = pd.DataFrame()
-for i in range(0, 2):
+for i in range(2, 4):
     titles = []
     for j in range(1,pages[i]+1):
         url = 'https://news.naver.com/main/main.naver?mode=LSD&mid=shm&sid1=10{}#&date=%2000:00:00&page={}'.format(i, j)
@@ -63,5 +63,9 @@ for i in range(0, 2):
 df_section_titles = pd.DataFrame(titles, columns=['titles'])
 df_section_titles['category'] = category[i]
 df_titles = pd.concat([df_titles, df_section_titles], ignore_index=True)
+# <<<<<<< main
+# df_titles.to_csv('./crawling_data1.csv', index=False)
+# =======
 df_titles.to_csv('./crawling_data0.csv', index=False)
+# >>>>>>> main
 driver.close()
