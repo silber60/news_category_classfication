@@ -15,9 +15,9 @@ options.add_argument('lang=ko_KR')
 options.add_argument('--no-sandbox')
 options.add_argument('--disable-dev-shm-usage')
 options.add_argument('disable-gpu')
-driver = webdriver.Chrome('./chromedriver', options=options)
+driver = webdriver.Chrome('./chromedriver1', options=options)
 df_titles = pd.DataFrame()
-for i in range(0, 2):
+for i in range(4, 6):
     titles = []
     for j in range(1,pages[i]+1):
         url = 'https://news.naver.com/main/main.naver?mode=LSD&mid=shm&sid1=10{}#&date=%2000:00:00&page={}'.format(i, j)
@@ -63,5 +63,5 @@ for i in range(0, 2):
 df_section_titles = pd.DataFrame(titles, columns=['titles'])
 df_section_titles['category'] = category[i]
 df_titles = pd.concat([df_titles, df_section_titles], ignore_index=True)
-df_titles.to_csv('./crawling_data0.csv', index=False)
+df_titles.to_csv('./crawling_data2.csv', index=False)
 driver.close()
